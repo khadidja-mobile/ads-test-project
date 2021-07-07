@@ -1,0 +1,81 @@
+<div class="modal">
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">
+      <mat-icon class="mdi mdi-dumbbell" aria-hidden="true">arrow_back</mat-icon>
+      <!-- <img id="retour" src="../assets/images/arrow-back.png" alt="" title="retour"> -->
+    </button>
+  </div>
+
+  <h1 mat-dialog-title>Su une echelle de 1 à 5, notez les activités physiques suivantes : </h1>
+  <div mat-dialog-content>
+    <p>Sachant que 1 réflétera "Je n'aime pas du tout cette activité et je ne la pratiquerai jamais" <br> et 5 étant
+      "J'aime beaucoup cette activité extrêmement motivé pour la pratiquer" ?</p>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Name Column -->
+      
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nom d l'activité </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!--  Column 1 -->
+      <ng-container matColumnDef="echelle1">
+        <th mat-header-cell *matHeaderCellDef> 1 </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-radio-button value="1"></mat-radio-button>
+      </td>
+      </ng-container>
+
+      <!-- Column 2 -->
+      <ng-container matColumnDef="echelle2">
+        <th mat-header-cell *matHeaderCellDef> 2 </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="2"></mat-radio-button>
+          </mat-radio-group>  
+        </td>
+      </ng-container>
+
+      <!-- Column 3 -->
+      <ng-container matColumnDef="echelle3">
+        <th mat-header-cell *matHeaderCellDef> 3 </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="3"></mat-radio-button>
+          </mat-radio-group>  
+        </td>
+      </ng-container>
+
+       <!-- Column 4 -->
+       <ng-container matColumnDef="echelle4">
+        <th mat-header-cell *matHeaderCellDef> 4 </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="4"></mat-radio-button>
+          </mat-radio-group>  
+        </td>
+      </ng-container>
+
+       <!-- Column 5 -->
+       <ng-container matColumnDef="echelle5">
+        <th mat-header-cell *matHeaderCellDef> 5 </th>
+        <td mat-cell *matCellDef="let element"> 
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="5"></mat-radio-button>
+          </mat-radio-group>  
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+  <div mat-dialog-actions>
+    <button class="btn-save" mat-button [mat-dialog-close]="" cdkFocusInitial>Save</button>
+  </div>
+</div>

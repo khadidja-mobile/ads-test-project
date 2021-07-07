@@ -1,0 +1,27 @@
+main {
+    height: 100%;
+}
+img{
+    border: 5px solid #9FD5F2;
+    background: linear-gradient(90deg, #732589, #6a288a, #612b8a, #582e8a, #4f308a, #453289, #3a3388, #2f3487);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 12px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.flex{
+    flex-flow: row wrap;
+}
+
+.full-width-dialog .mat-dialog-container {
+    max-width: 100vw !important;
+  }
+
+@media screen and (max-width: 576px) {
+    .flex {
+     flex-direction: column;
+    }
+}

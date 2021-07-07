@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("/assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat medium';
+  src: url("/assets/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat bold';
+  src: url("/assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat light';
+  src: url("/assets/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat thin italic';
+  src: url("/assets/fonts/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat italic';
+  src: url("/assets/fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat light italic';
+  src: url("/assets/fonts/Montserrat/Montserrat-LightItalic.ttf") format("truetype");
+}
+  
+html, body { height: 100%; }
+body { 
+  background: #0C0C18;
+  background: -webkit-linear-gradient(top, #0C0C18, #43426D);
+  background: -moz-linear-gradient(top, #0C0C18, #43426D);
+  background: linear-gradient(to bottom, #0C0C18, #43426D);
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
