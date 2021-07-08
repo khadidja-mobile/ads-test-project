@@ -9,7 +9,7 @@ import { ActivitePhysiqueFormComponent } from './activite-physique-form/activite
 })
 export class MainComponent implements OnInit {
 
-  animal!: string;
+  echelle!: number;
   name!: string;
 
   constructor(public dialog: MatDialog) { }
@@ -17,12 +17,12 @@ export class MainComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(ActivitePhysiqueFormComponent, {
       width: '80vw',
-      data: {name: this.name, animal: this.animal}
+      data: {name: this.name, animal: this.echelle}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      this.echelle = result;
     });
   }
 
