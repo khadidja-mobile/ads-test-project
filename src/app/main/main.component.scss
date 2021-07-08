@@ -10,6 +10,14 @@ img{
     padding: 12px;
     margin: 40px;
     cursor: pointer;
+    transition: background .2s, color .2s;
+    transition: transform .7s ease-in-out;
+}
+
+img:hover{
+    background: linear-gradient(180deg, #732589, #6a288a, #612b8a, #582e8a, #4f308a, #453289, #3a3388, #2f3487);
+    animation: spinAround 2s linear;
+    transform: rotate(360deg) scale(1.15);
 }
 
 /*.flex{
