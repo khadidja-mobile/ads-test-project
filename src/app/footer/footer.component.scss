@@ -50,3 +50,9 @@ footer{
 :host ::ng-deep .mat-form-field-wrapper{
   padding: 0;
 }
+
+@media screen and (max-width: 576px) {
+  .flex {
+   flex-direction: column;
+  }
+}

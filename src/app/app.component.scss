@@ -1,17 +1,22 @@
+*{
+  box-sizing: border-box;
+}
+
 app-header{
   width: 100%;
 }
 
 app-footer{
   background-color: #4C4A7A;
-  width: 100%;
+  /* width: 100%;
   position: fixed;
   height: 100px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 0px; */
   padding: 20px;
+  width: 100%;
 }
 
 .flex{
@@ -22,6 +27,12 @@ app-footer{
   background: linear-gradient(to bottom, #0C0C18, #43426D);
   margin: 0; 
   font-family: 'Montserrat', sans-serif; 
+}
+
+@media screen and (max-width: 576px) {
+  .flex {
+   flex-direction: column;
+  }
 }
 
 
